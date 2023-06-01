@@ -82,7 +82,7 @@ class VoteScraper:
     def __init__(self):
         self.year = 2023
         self.url_base = "https://aflcoaches.com.au/awards/the-aflca-champion-player-of-the-year-award/leaderboard/"
-        self.suffix = "/2024010"
+        self.suffix = "/202401"
         self.result = requests.get(self.make_url())
         self.doc = BeautifulSoup(self.result.text, "html.parser")
         self.current_round = self._current_round()
